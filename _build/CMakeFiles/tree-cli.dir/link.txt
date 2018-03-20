@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/tree-cli.dir/examples/tree-cli.cpp.o  -o tree-cli libtree.a 

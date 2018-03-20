@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/tree.h
+
+/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/examples/tree-cli.cpp
+iostream
+-
+tree.h
+/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/examples/tree.h
+
