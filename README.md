@@ -1,5 +1,5 @@
 # AVLTree
-[![Build Status](https://travis-ci.org/kit10000000/AVLTree.svg?branch=master)](https://travis-ci.org/kit10000000/AVLTree)
+[![Build Status](https://travis-ci.org/kit10000000/AVLTree.svg?branch=develop)](https://travis-ci.org/kit10000000/AVLTree)
 
 Целью данного проекта является разработка программы для работы с двоичным деревом поиска (далее будем называть просто деревом) со следующим TUI:
 
