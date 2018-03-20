@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "./include/tree.h"
+#include "/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/include/tree.h"
 
 void print_menu();
 void work();
