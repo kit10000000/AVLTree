@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/AVLTree/include/tree.h
+/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/include/tree.h
 
 /Users/e.chernikova/kit10000000/workspace/projects/AVLTree/sources/tree.cpp
 stdio.h
 -
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/AVLTree/include/tree.h
+/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/include/tree.h
 -
 

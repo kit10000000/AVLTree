@@ -20,6 +20,9 @@ AVLTree_BINARY_DIR:STATIC=/Users/e.chernikova/kit10000000/workspace/projects/AVL
 //Value Computed by CMake
 AVLTree_SOURCE_DIR:STATIC=/Users/e.chernikova/kit10000000/workspace/projects/AVLTree
 
+//Build examples
+BUILD_EXAMPLES:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ar
 
@@ -88,7 +91,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr/local
+CMAKE_INSTALL_PREFIX:PATH=/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ld
