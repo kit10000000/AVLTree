@@ -1,6 +1,0 @@
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/lib/libtree.a
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/include/.DS_Store
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/include/tree.h.orig
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/include/tree.h
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/cmake/AVLTree-config.cmake
-/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/_install/cmake/AVLTree-config-noconfig.cmake
