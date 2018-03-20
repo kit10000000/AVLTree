@@ -7,7 +7,7 @@
 //
 
 #include <stdio.h>
-#include "/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/include/tree.h"
+#include <tree.h>
 
 AVLTree::Tree::Tree() {
     this -> root = nullptr;
