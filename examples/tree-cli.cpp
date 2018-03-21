@@ -15,46 +15,21 @@ bool check_repeating(int n, const char * argv_arr[]);
 bool check_input(int input);
 
 int main(int argc, const char * argv[]) {
-    if (argc >= 1) {
+    if (argc > 1) {
         AVLTree::Tree tree;
-        // проверка на уникальность ключей
-        bool check = check_repeating(argc, argv);
-        if (check) {
-            std::cout << "Элементы повторяются" << std::endl;
-            return 0;
-        } else {
-            // инициализация дерева
-            std::cout << "Работа с деревом" << std::endl;
-            for (int i = 1; i < argc; i++) {
-                tree.insert(atoi(argv[i]));
-            }
-            work();
+        std::set<int> nodes;
+        std::cout << "Работа с деревом" << std::endl; //инициализация дерева
+        for(int i = 1; i < argc; i++)
+        {
+            nodes.insert(atoi(argv[i]));
         }
+        std::for_each(nodes.begin(), nodes.end(), [&tree](int n){tree.insert(n);} );
+        
+        work();
     } else {
         work();
     }
     return 0;
-}
-
-bool check_repeating(int n, const char * argv_arr[]) {
-    bool contain_repeating = false;
-    for (int i = 1; i < n; i++) {
-        for (int j = 1; j < n; j++) {
-            if (i == j) {
-            } else {
-                if (atoi(argv_arr[i]) == atoi(argv_arr[j])) {
-                    contain_repeating = true;
-                    return contain_repeating;
-                }
-            }
-        }
-    }
-    return contain_repeating;
-}
-bool check_input(int input) {
-    bool is_correct = true;
-    is_correct =  input > 8 || input < 1 ? 0 : 1;
-    return is_correct;
 }
 
 void print_menu() {
