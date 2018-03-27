@@ -37,4 +37,5 @@
 .idea/
 *.cpp.orig
 *.h.orig
+.DS_Store
 
