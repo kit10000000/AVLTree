@@ -8,31 +8,28 @@
 
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
-namespace AVLTree {
+
+#include <iostream>
+#include <stdio.h>
+namespace  BST {
 struct Node {
-        int   data;
-       // int height;
-        Node* left;
-        Node* right;
-}
+    int   data;
+    // int height;
+    Node* left;
+    Node* right;
+};
 class Tree {
-        enum class traversal_order {pre, in, post};
+    enum class traversal_order {pre, in, post};
  public:
-            Tree();
-            // Tree(std::initializer_list<int> list);
-            // Tree(const Tree& tree);
-            // Tree(Tree&& tree);
-            void insert(int value);
-            Node* insert(int key, AVLTree::Node* node);
-            // bool exists(int value);
-            // bool remove(int value);
-            // bool save(const std::string& path);
-            // bool load(const std::string& path);
-            // void print(traversal_order order);
-            ~Tree();
+    Tree();
+    void insert(int value);
+    Node* insert(int key,  BST::Node* node);
+    void print_tree(int indent);
+    void print_tree( BST::Node* node, int indent);
+    ~Tree();
  private:
-            Node* root;
-}
+    Node* root;
+};
 }  // namespace AVLTree
 
 #endif  // INCLUDE_TREE_H_

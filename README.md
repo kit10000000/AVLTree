@@ -1,5 +1,5 @@
-# AVLTree
-[![Build Status](https://travis-ci.org/kit10000000/AVLTree.svg?branch=develop)](https://travis-ci.org/kit10000000/AVLTree)
+# BSTTree
+[![Build Status](https://travis-ci.org/kit10000000/BSTTree.svg?branch=develop)](https://travis-ci.org/kit10000000/BSTTree)
 
 Целью данного проекта является разработка программы для работы с двоичным деревом поиска (далее будем называть просто деревом) со следующим TUI:
 
@@ -18,7 +18,7 @@
 
 Этапы:
 1. :deciduous_tree:
-2.
+2. :deciduous_tree:
 3.
 4.
 5.

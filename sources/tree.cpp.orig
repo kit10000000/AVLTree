@@ -6,30 +6,57 @@
 //  Copyright © 2018 E. Chernikova. All rights reserved.
 //
 
-#include <stdio.h>
-#include "/Users/e.chernikova/kit10000000/workspace/projects/AVLTree/AVLTree/include/tree.h"
+#include "tree.h"
 
-AVLTree::Tree::Tree() {
+ BST::Tree::Tree()
+{
     this -> root = nullptr;
 }
-AVLTree::Tree::~Tree() {
+ BST::Tree::~Tree()
+{
+
 }
-void AVLTree::Tree::insert(int key) {
-     this->root = insert(key, this->root);
+void  BST::Tree::insert(int key)
+{
+     this->root=insert(key, this->root);
 }
-AVLTree::Node* AVLTree::Tree::insert(int key, AVLTree::Node* node) {
-    if (node == nullptr) {
+
+ BST::Node*  BST::Tree::insert(int key, BST::Node* node)
+{
+    if(node == nullptr)
+    {
         Node* node = new Node();
         node -> data = key;
         node -> right = nullptr;
         node -> left  = nullptr;
         return node;
-    } else {
-        if (key< node ->data) {
+    }
+    else
+    {
+        if(key< node ->data)
             node->left = insert(key, node->left);
-        } else {
+        else
+        {
             node->right = insert(key, node->right);
         }
     }
     return node;
+}
+void  BST::Tree::print_tree(int indent){
+    if(this->root){
+        print_tree(this->root, indent + 1);
+    } else {
+        std::cout <<"Дерево пусто" << std::endl;
+    }
+}
+
+
+void  BST::Tree::print_tree( BST::Node *node, int indent){
+    
+    if(node){        
+        print_tree(node -> right, indent + 1);
+        for(int i = 0; i< indent; i++) std::cout <<"  ";
+        std::cout << "--" << node->data << std::endl;
+        print_tree(node -> left, indent + 1);
+    }
 }

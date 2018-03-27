@@ -35,3 +35,6 @@
 *install*/
 *.swp
 .idea/
+*.cpp.orig
+*.h.orig
+
