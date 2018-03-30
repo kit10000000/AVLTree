@@ -25,3 +25,9 @@
 6.
 7.
 8.
+
+```ShellSession
+$ git clone https://github.com/kit10000000/BSTTree.git
+$ cmake -H. -B_builds -DBUILD_EXAMPLES=ON
+$ cmake --build _builds
+```
