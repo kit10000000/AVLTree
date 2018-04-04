@@ -19,7 +19,7 @@
 Этапы:
 1. :deciduous_tree:
 2. :deciduous_tree:
-3.
+3. :deciduous_tree:
 4.
 5.
 6.
@@ -27,7 +27,9 @@
 8.
 
 ```ShellSession
-$ git clone https://github.com/kit10000000/BSTTree.git
+$ git clone https://github.com/kit10000000/BSTTree.git BSTTree
+$ cd BSTTree
+$ git checkout develop
 $ cmake -H. -B_builds
 $ cmake --build _builds
 ```
