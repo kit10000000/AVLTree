@@ -10,7 +10,6 @@
 #include "tree.h"
 #include "tui.h"
 #include <unordered_set>
-#include <algorithm>
 
 
 int main(int argc, const char * argv[]) {

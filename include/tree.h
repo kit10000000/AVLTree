@@ -12,6 +12,8 @@
 #include <iostream>
 
 namespace  BSTTree {
+    
+enum class traversal_order {pre_order, in_order, post_order};
 struct Node {
     int   data;
     // int height;
@@ -19,13 +21,14 @@ struct Node {
     Node* right;
 };
 class Tree {
-    enum class traversal_order {pre, in, post};
  public:
     Tree();
     void insert(int value);
     Node* insert(int key,  BSTTree::Node* node);
     void print_tree(int indent);
     void print_tree(BSTTree::Node* node, int indent);
+    void show_nodes(BSTTree::traversal_order order);
+    void show_nodes(BSTTree::traversal_order order, BSTTree::Node* node);
     ~Tree();
  private:
     Node* root;

@@ -12,6 +12,7 @@ BSTTree::Tree::Tree() {
     this -> root = nullptr;
 }
 BSTTree::Tree::~Tree() {
+    delete this;
 }
 void  BSTTree::Tree::insert(int key) {
     this->root = insert(key, this->root);
@@ -24,10 +25,14 @@ BSTTree::Node*  BSTTree::Tree::insert(int key, BSTTree::Node* node) {
         node -> left  = nullptr;
         return node;
     } else {
-        if (key< node ->data)
-            node->left = insert(key, node->left);
-        else
-            node->right = insert(key, node->right);
+        if (key != node ->data){
+            if(key< node ->data)
+                node->left = insert(key, node->left);
+            else
+                node->right = insert(key, node->right);
+        } else {
+            std::cout <<"Узел уже существует в дереве" << std::endl;
+        }
     }
     return node;
 }
@@ -46,3 +51,36 @@ void BSTTree::Tree::print_tree(BSTTree::Node *node, int indent) {
         print_tree(node -> left, indent + 1);
     }
 }
+void  BSTTree::Tree::show_nodes(BSTTree::traversal_order order) {
+    if (this->root) {
+        show_nodes(order, this->root);
+        std::cout << std::endl;
+    } else {
+        std::cout <<"Дерево пусто" << std::endl;
+    }
+}
+void BSTTree::Tree::show_nodes(BSTTree::traversal_order order, BSTTree::Node* node){
+    if (order == BSTTree::traversal_order::pre_order) {
+        if (node) {
+            std::cout << node->data << " ";
+            show_nodes(order, node ->left);
+            show_nodes(order, node ->right);
+        }
+    }
+    if (order == BSTTree::traversal_order:: in_order) {
+        if (node) {
+            show_nodes(order, node ->left);
+            std::cout << node->data << " ";
+            show_nodes(order, node ->right);
+        }
+    }
+    if (order == BSTTree::traversal_order::post_order ) {
+        if (node) {
+            show_nodes(order, node ->left);
+            show_nodes(order, node ->right);
+            std::cout << node->data << " ";
+        }
+    }
+}
+
+
