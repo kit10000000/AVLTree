@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <sstream>
 #include "tree.h"
+#include <limits>
 
 
 #ifndef INCLUDE_TUI_H_
