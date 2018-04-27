@@ -20,11 +20,21 @@
 1. :deciduous_tree:
 2. :deciduous_tree:
 3. :deciduous_tree:
-4.
-5.
-6.
-7.
-8.
+4. :deciduous_tree:
+5. :deciduous_tree:
+6. :deciduous_tree:
+7. :deciduous_tree:
+8. :deciduous_tree:
+
+Требования:
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
 
 ```ShellSession
 $ git clone https://github.com/kit10000000/BSTTree.git BSTTree
