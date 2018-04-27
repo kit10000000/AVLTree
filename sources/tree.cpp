@@ -35,17 +35,17 @@ auto BSTTree::Tree::operator=(const Tree& tree)-> Tree&{
     this -> root = copy_node(tree.root);
     return *this;
 }
-
-auto BSTTree::operator<<(std::ostream& stream, const BSTTree::Tree& tree) -> std::ostream&{
-    if (tree.root) {
-        tree.Tree::save_tree(tree.root, stream);
-        std::cout << std::endl;
-        } else {
-            std::cout <<"Дерево пусто" << std::endl;
-        }
-        return stream;
+namespace BSTTree{
+    auto operator<<(std::ostream& stream, const Tree& tree) -> std::ostream&{
+        if (tree.root) {
+            tree.Tree::save_tree(tree.root, stream);
+            std::cout << std::endl;
+            } else {
+                std::cout <<"Дерево пусто" << std::endl;
+            }
+            return stream;
+    }
 }
-
 BSTTree::Node* BSTTree::Tree::copy_node(BSTTree::Node* old_node){
     if(old_node != nullptr)
     {
