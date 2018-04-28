@@ -1,6 +1,6 @@
 //
 //  tree.h
-//  AVLTree
+//  BSTree
 //
 //  Created by E. Chernikova on 20.03.2018.
 //  Copyright © 2018 E. Chernikova. All rights reserved.
@@ -14,7 +14,7 @@
 #include <cstdlib>
 
 namespace  BSTTree {
-    
+
 enum class traversal_order {pre_order, in_order, post_order};
 struct Node {
     int   data;
@@ -34,13 +34,12 @@ class Tree {
     void delete_node(int value);
 //    void save_tree(const Tree& tree, std::ostream &file);
     bool check_existing(int key);
-    void swap(Tree& one, Tree& two);
     auto operator=(const Tree& tree)-> Tree&;
     auto operator=(Tree&&) -> Tree&;
     friend auto operator<<(std::ostream& stream, const Tree& tree) -> std::ostream&;
     ~Tree();
+
  private:
-    
     Node* root;
     Node* insert(int key,  BSTTree::Node* node);
     int find_min(BSTTree::Node* node);
@@ -49,9 +48,8 @@ class Tree {
     bool check_existing(int key,  BSTTree::Node* node);
     Node* delete_node(int key,  BSTTree::Node* node);
     void show_nodes(BSTTree::traversal_order order, BSTTree::Node* node);
-    std::ostream& save_tree(const BSTTree::Node* node,std::ostream &file) const;
+    std::ostream& save_tree(const BSTTree::Node* node, std::ostream &file) const;
     Node* copy_node(BSTTree::Node* node);
-
 };
 }  // namespace BSTTree
 

@@ -8,7 +8,7 @@ option(BUILD_EXAMPLES "Build examples" ON)
 option(BUILD_TESTS "Build tests" OFF)
 
 project(BSTTree)
-
+include_directories("${CMAKE_SOURCE_DIR}/include")
 
 add_library(tree STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/tree.cpp)
 add_library(tui STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/tui.cpp)

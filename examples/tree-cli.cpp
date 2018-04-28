@@ -1,6 +1,11 @@
+//  BSTree
+//  tree-cli.cpp
+//  Created by E. Chernikova on 20.03.2018.
+//  Copyright © 2018 E. Chernikova. All rights reserved.
+//
 #include <iostream>
-#include "tree.h"
-#include "tui.h"
+#include "../include/tree.h"
+#include "../include/tui.h"
 #include <unordered_set>
 #include <algorithm>
 
@@ -30,7 +35,7 @@ int main(int argc, const char * argv[]) {
 //        BSTTree::Tree tree1 = BSTTree::Tree();
 //        tree1 = std::move(tree);
         interface.work(tree);
-        
+
     } else {
         interface.work(tree);
     }
