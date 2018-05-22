@@ -1,7 +1,7 @@
 #include "catch.hpp"
 #include "../include/tree.h"
 #include "../include/tui.h"
-
+#include <initializer_list>
 TEST_CASE("Test tree", "[tree]"){
     BSTTree::Tree tree1 = BSTTree::Tree();
     tree1.insert(6);
