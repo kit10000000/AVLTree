@@ -8,6 +8,7 @@
 
 
 #include "../include/tree.h"
+#include <initializer_list>
 
 BSTTree::Tree::Tree() {
     this -> root = nullptr;
