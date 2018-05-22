@@ -7,7 +7,7 @@
 //
 
 
-#include "tree.h"
+#include "../include/tree.h"
 
 BSTTree::Tree::Tree() {
     this -> root = nullptr;
