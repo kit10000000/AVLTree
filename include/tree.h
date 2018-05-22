@@ -12,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <initializer_list>
 
 namespace  BSTTree {
 

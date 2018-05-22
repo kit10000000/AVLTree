@@ -34,12 +34,14 @@ std::string BSTTree::TUI::user_input() {
     return input;
 }
 
-void BSTTree::TUI::work_with_file(BSTTree::Tree &tree, int working_mode) {
-    std::string path = user_input();
+void BSTTree::TUI::work_with_file(BSTTree::Tree &tree, int working_mode, bool need_path) {
+    std::string path = "1.txt";
+    if (need_path)
+        std::string path = user_input();
     bool check = check_file_exist(path);
     std::string str;
     if (working_mode == 1) {
-        if (check) {
+        if (check && need_path) {
             std::cout << "Файл уже существует, перезаписать? (Да|Нет):" << std::endl;
             std::cin>> str;
             while (str != "Нет" && str != "Да") {
@@ -128,12 +130,12 @@ void BSTTree::TUI::work(BSTTree::Tree &tree) {
         case 5:
             std::cout << "5. Сохранить дерево в файл" << std::endl;
             std::cout << "Введите путь к файлу" << std::endl;
-            work_with_file(tree, 1);
+            work_with_file(tree, 1, true);
             break;
         case 6:
             std::cout << "6. Загрузить дерево из файла" << std::endl;
             std::cout << "Введите путь к файлу" << std::endl;
-            work_with_file(tree, 2);
+            work_with_file(tree, 2, true);
             break;
         case 7:
             std::cout << "7. Проверить наличие узла" << std::endl;

@@ -25,7 +25,7 @@ class TUI {
     int approve_choice();
     std::string user_input();
     bool check_file_exist(std::string& path);
-    void work_with_file(BSTTree::Tree& tree, int working_mode);
+    void work_with_file(BSTTree::Tree& tree, int working_mode, bool need_path);
 };
 }   //  namespace BSTTree
 
