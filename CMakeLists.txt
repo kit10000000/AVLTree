@@ -10,6 +10,14 @@ option(BUILD_TESTS "Build tests" ON)
 project(BSTTree)
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION_TWEAK 0)
+set(PRINT_VERSION 
+${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}.${PRINT_VERSION_TWEAK})
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+
 add_library(tree STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/tree.cpp)
 add_library(tui STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/tui.cpp)
 
@@ -53,3 +61,5 @@ if(BUILD_TESTS)
   message(STATUS "DEPENDS LIBS: [${DEPENDS_LIBRARIES}]")
   add_test(NAME check COMMAND check "-s" "-r" "compact" "--use-colour" "yes") 
 endif()
+
+include(CPackConfig.cmake)
