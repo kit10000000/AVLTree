@@ -24,7 +24,7 @@ TEST_CASE("Test tree", "[tree]"){
     tree5 = std::move(tree1);
     
     std::cout <<"Конструктор с листом" << std::endl;
-    std::initializer_list <int> nodes1 = {6,8,7,9,4,1};
+    initializer_list <int> nodes1 = {6,8,7,9,4,1};
     BSTTree::Tree tree =  BSTTree::Tree(nodes1);
     tree.print_tree(0);
     
