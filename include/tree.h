@@ -57,8 +57,13 @@ class Tree {
     //!удаление узла
     //!
     void delete_node(int value);
-//    void save_tree(const Tree& tree, std::ostream &file);
+    //!
+    //!проверка существования узла
+    //!
     bool check_existing(int key);
+    //!
+    //!перегразка операторов
+    //!
     auto operator=(const Tree& tree)-> Tree&;
     auto operator=(Tree&&) -> Tree&;
     friend auto operator<<(std::ostream& stream, const Tree& tree) -> std::ostream&;
