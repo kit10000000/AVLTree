@@ -25,11 +25,29 @@ struct Node {
 };
 class Tree {
  public:
+    //!
+    //!стандартный конструктор
+    //!
     Tree();
+    //!
+    //!конструктор из листа
+    //!
     Tree(std::initializer_list<int> list);
+    //!
+    //!конструктор копирования
+    //!
     Tree(const Tree &tree);
+    //!
+    //!конструктор переноса
+    //!
     Tree(Tree&& tree);
+    //!
+    //!вставка узла в дерево
+    //!
     void insert(int value);
+    //!
+    //!вывод дерева в консоль
+    //!
     void print_tree(int indent);
     void show_nodes(BSTTree::traversal_order order);
     void delete_node(int value);

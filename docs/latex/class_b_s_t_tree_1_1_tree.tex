@@ -1,0 +1,130 @@
+\hypertarget{class_b_s_t_tree_1_1_tree}{}\section{B\+S\+T\+Tree\+:\+:Tree Class Reference}
+\label{class_b_s_t_tree_1_1_tree}\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_tree_1_1_tree_ab341ae8f5ea3eec3dd7eb2acb0126e8b}{Tree}} ()
+\item 
+\mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a425b43fb9301c18ac7241e173b05f7e0}{Tree}} (std\+::initializer\+\_\+list$<$ int $>$ list)
+\item 
+\mbox{\hyperlink{class_b_s_t_tree_1_1_tree_aa16db87e1a4e57addbbd8513f20150a5}{Tree}} (const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&tree)
+\item 
+\mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a1177427abc9e4e1c77358c30b5eaeda2}{Tree}} (\mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&\&tree)
+\item 
+void \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a4f6816912547a485ab853eb125e261a2}{insert}} (int value)
+\item 
+void \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_aaa4094ca75c834acc9dbd1201791450e}{print\+\_\+tree}} (int indent)
+\item 
+void \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a122d418f295da0b66ae050174e74a828}{show\+\_\+nodes}} (\mbox{\hyperlink{namespace_b_s_t_tree_a711723b85e5af09e10bfcc3a3b501fe2}{B\+S\+T\+Tree\+::traversal\+\_\+order}} order)
+\item 
+void \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_ae1b302d3de2ca202f7b89bd46d4a7eca}{delete\+\_\+node}} (int value)
+\item 
+bool \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_ac78c4c85e486aade23d8ac740a711537}{check\+\_\+existing}} (int key)
+\item 
+auto \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a4310f8ce5de32401811946bb20b5e634}{operator=}} (const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&tree) -\/$>$ \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&
+\item 
+auto \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_aa71187977d9e86293e250214bb53f423}{operator=}} (\mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&\&) -\/$>$ \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&
+\item 
+\mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a9342fe23d2476501afc8574ba822d0dd}{$\sim$\+Tree}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{class_b_s_t_tree_1_1_tree_a4df8fc028c7dd645f2d9507fcc0fa407}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&tree) -\/$>$ std\+::ostream \&
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_ab341ae8f5ea3eec3dd7eb2acb0126e8b}\label{class_b_s_t_tree_1_1_tree_ab341ae8f5ea3eec3dd7eb2acb0126e8b}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily B\+S\+T\+Tree\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+стандартный конструктор \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a425b43fb9301c18ac7241e173b05f7e0}\label{class_b_s_t_tree_1_1_tree_a425b43fb9301c18ac7241e173b05f7e0}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily B\+S\+T\+Tree\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ int $>$}]{list }\end{DoxyParamCaption})}
+
+конструктор из листа \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_aa16db87e1a4e57addbbd8513f20150a5}\label{class_b_s_t_tree_1_1_tree_aa16db87e1a4e57addbbd8513f20150a5}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily B\+S\+T\+Tree\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&}]{tree }\end{DoxyParamCaption})}
+
+конструктор копирования \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a1177427abc9e4e1c77358c30b5eaeda2}\label{class_b_s_t_tree_1_1_tree_a1177427abc9e4e1c77358c30b5eaeda2}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily B\+S\+T\+Tree\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&\&}]{tree }\end{DoxyParamCaption})}
+
+конструктор переноса \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a9342fe23d2476501afc8574ba822d0dd}\label{class_b_s_t_tree_1_1_tree_a9342fe23d2476501afc8574ba822d0dd}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!````~Tree@{$\sim$\+Tree}}
+\index{````~Tree@{$\sim$\+Tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Tree()}{~Tree()}}
+{\footnotesize\ttfamily B\+S\+T\+Tree\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_ac78c4c85e486aade23d8ac740a711537}\label{class_b_s_t_tree_1_1_tree_ac78c4c85e486aade23d8ac740a711537}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!check\+\_\+existing@{check\+\_\+existing}}
+\index{check\+\_\+existing@{check\+\_\+existing}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{check\+\_\+existing()}{check\_existing()}}
+{\footnotesize\ttfamily bool B\+S\+T\+Tree\+::\+Tree\+::check\+\_\+existing (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_ae1b302d3de2ca202f7b89bd46d4a7eca}\label{class_b_s_t_tree_1_1_tree_ae1b302d3de2ca202f7b89bd46d4a7eca}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!delete\+\_\+node@{delete\+\_\+node}}
+\index{delete\+\_\+node@{delete\+\_\+node}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{delete\+\_\+node()}{delete\_node()}}
+{\footnotesize\ttfamily void B\+S\+T\+Tree\+::\+Tree\+::delete\+\_\+node (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a4f6816912547a485ab853eb125e261a2}\label{class_b_s_t_tree_1_1_tree_a4f6816912547a485ab853eb125e261a2}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!insert@{insert}}
+\index{insert@{insert}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void B\+S\+T\+Tree\+::\+Tree\+::insert (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+вставка узла в дерево \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a4310f8ce5de32401811946bb20b5e634}\label{class_b_s_t_tree_1_1_tree_a4310f8ce5de32401811946bb20b5e634}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto B\+S\+T\+Tree\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&}]{tree }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&}
+
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_aa71187977d9e86293e250214bb53f423}\label{class_b_s_t_tree_1_1_tree_aa71187977d9e86293e250214bb53f423}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto B\+S\+T\+Tree\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&\&}]{ }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&}
+
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_aaa4094ca75c834acc9dbd1201791450e}\label{class_b_s_t_tree_1_1_tree_aaa4094ca75c834acc9dbd1201791450e}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!print\+\_\+tree@{print\+\_\+tree}}
+\index{print\+\_\+tree@{print\+\_\+tree}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{print\+\_\+tree()}{print\_tree()}}
+{\footnotesize\ttfamily void B\+S\+T\+Tree\+::\+Tree\+::print\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{indent }\end{DoxyParamCaption})}
+
+вывод дерева в консоль \mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a122d418f295da0b66ae050174e74a828}\label{class_b_s_t_tree_1_1_tree_a122d418f295da0b66ae050174e74a828}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!show\+\_\+nodes@{show\+\_\+nodes}}
+\index{show\+\_\+nodes@{show\+\_\+nodes}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{show\+\_\+nodes()}{show\_nodes()}}
+{\footnotesize\ttfamily void B\+S\+T\+Tree\+::\+Tree\+::show\+\_\+nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_b_s_t_tree_a711723b85e5af09e10bfcc3a3b501fe2}{B\+S\+T\+Tree\+::traversal\+\_\+order}}}]{order }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_tree_1_1_tree_a4df8fc028c7dd645f2d9507fcc0fa407}\label{class_b_s_t_tree_1_1_tree_a4df8fc028c7dd645f2d9507fcc0fa407}} 
+\index{B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!B\+S\+T\+Tree\+::\+Tree@{B\+S\+T\+Tree\+::\+Tree}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily auto operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{class_b_s_t_tree_1_1_tree}{Tree}} \&}]{tree }\end{DoxyParamCaption}) -\/$>$  std\+::ostream \&\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{tree_8h}{tree.\+h}}\end{DoxyCompactItemize}
