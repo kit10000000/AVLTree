@@ -49,7 +49,13 @@ class Tree {
     //!вывод дерева в консоль
     //!
     void print_tree(int indent);
+    //!
+    //!вывод узлов в нужном порядке
+    //!
     void show_nodes(BSTTree::traversal_order order);
+    //!
+    //!удаление узла
+    //!
     void delete_node(int value);
 //    void save_tree(const Tree& tree, std::ostream &file);
     bool check_existing(int key);
