@@ -18,5 +18,5 @@ after_build:
   - cmake --build _build --target package 
 
 test_script:
-  - cd build_
+  - cd _build
   - ./check -s -r compact
