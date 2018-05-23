@@ -1,5 +1,6 @@
 # BSTTree
 [![Build Status](https://travis-ci.org/kit10000000/BSTTree.svg?branch=develop)](https://travis-ci.org/kit10000000/BSTTree)
+[![Build status](https://ci.appveyor.com/api/projects/status/sw6yldb4u6fggkf5?svg=true)](https://ci.appveyor.com/project/kit10000000/bsttree)
 
 Целью данного проекта является разработка программы для работы с двоичным деревом поиска (далее будем называть просто деревом) со следующим TUI:
 
