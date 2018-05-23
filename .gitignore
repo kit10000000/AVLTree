@@ -38,4 +38,6 @@
 *.cpp.orig
 *.h.orig
 .DS_Store
+*docs*/
+
 
