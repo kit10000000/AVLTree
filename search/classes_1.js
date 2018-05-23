@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['betweengenerator',['BetweenGenerator',['../class_catch_1_1_between_generator.html',1,'Catch']]],
-  ['binaryexpression',['BinaryExpression',['../class_catch_1_1_binary_expression.html',1,'Catch']]],
-  ['borgtype',['BorgType',['../struct_catch_1_1_detail_1_1_borg_type.html',1,'Catch::Detail']]]
+  ['tree',['Tree',['../class_b_s_t_tree_1_1_tree.html',1,'BSTTree']]],
+  ['tui',['TUI',['../class_b_s_t_tree_1_1_t_u_i.html',1,'BSTTree']]]
 ];

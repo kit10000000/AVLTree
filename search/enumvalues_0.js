@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['continueonfailure',['ContinueOnFailure',['../struct_catch_1_1_result_disposition.html#a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5',1,'Catch::ResultDisposition']]]
+  ['in_5forder',['in_order',['../namespace_b_s_t_tree.html#a711723b85e5af09e10bfcc3a3b501fe2af51b25ca6f591d130cd0b575bf7821b3',1,'BSTTree']]]
 ];
