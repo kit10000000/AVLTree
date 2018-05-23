@@ -1,7 +1,7 @@
 #include "catch.hpp"
 #include "../include/tree.h"
 #include "../include/tui.h"
-#include <initializer_list>
+
 TEST_CASE("Test tree", "[tree]"){
     BSTTree::Tree tree1 = BSTTree::Tree();
     tree1.insert(6);
@@ -25,7 +25,12 @@ TEST_CASE("Test tree", "[tree]"){
     
     std::cout <<"Конструктор с листом" << std::endl;
     std::initializer_list <int> nodes1 = {6,8,7,9,4,1};
-    BSTTree::Tree tree =  BSTTree::Tree(nodes1);
+    BSTTree::Tree tree8 = nodes1;
+    tree8.print_tree(0);
+
+    
+    std::cout <<"Бвыший конструктор с листом" << std::endl;
+    BSTTree::Tree tree =  BSTTree::Tree();
     tree.print_tree(0);
     
     std::cout <<"Добавление существующего узла" << std::endl;

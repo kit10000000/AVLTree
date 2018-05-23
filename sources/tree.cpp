@@ -8,7 +8,6 @@
 
 
 #include "../include/tree.h"
-#include <initializer_list>
 
 BSTTree::Tree::Tree() {
     this -> root = nullptr;
@@ -16,7 +15,7 @@ BSTTree::Tree::Tree() {
 
 BSTTree::Tree::Tree(std::initializer_list<int> list) {
     for (auto n : list) {
-        this -> insert(n);
+       this -> root = insert(n, this-> root);
     }
 }
 auto BSTTree::Tree::operator=(Tree&& tree) -> Tree& {
