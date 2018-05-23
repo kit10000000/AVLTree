@@ -11,15 +11,12 @@ build_script:
   - cmake --build _build --target install
   - cmake --build _build --target test
   
-build: off
-
 after_build:
-- cd _build 
-- cpack -G "TGZ" 
-- cd ..
-- cmake --build _build --target package 
-
+  - cd _build 
+  - cpack -G "TGZ" 
+  - cd ..
+  - cmake --build _build --target package 
 
 test_script:
-- cd build_
-- ./check -s -r compact
+  - cd build_
+  - ./check -s -r compact
