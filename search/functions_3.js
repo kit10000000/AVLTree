@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['insert',['insert',['../class_b_s_t_tree_1_1_tree.html#a4f6816912547a485ab853eb125e261a2',1,'BSTTree::Tree']]]
+  ['find_5fmin',['find_min',['../class_b_s_t_tree_1_1_tree.html#afdd6b1274cb89ba7d09581f05ece0a73',1,'BSTTree::Tree']]]
 ];
