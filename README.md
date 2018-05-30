@@ -27,6 +27,8 @@
 7. :deciduous_tree:
 8. :deciduous_tree:
 
+Документация: [:green_book:](https://kit10000000.github.io/BSTTree/index.html)
+
 Требования:
 1. :white_check_mark: Все функции по работе с деревом должны находиться в
 пространстве имен ${Type}Tree.
