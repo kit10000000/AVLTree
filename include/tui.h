@@ -1,32 +1,57 @@
 //
 //  tui.h
-//  BSTree
+//  AVLTree
 //
-//  Created by E. Chernikova on 20.03.2018.
+//  Created by E. Chernikova on 27.03.2018.
 //  Copyright © 2018 E. Chernikova. All rights reserved.
 //
-
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <stdio.h>
 #include <sstream>
-#include <limits>
-#include "../include/tree.h"
+#include "tree.h"
+
 
 #ifndef INCLUDE_TUI_H_
 #define INCLUDE_TUI_H_
 namespace  BSTTree {
 class TUI {
- public:
-    void work(BSTTree::Tree& tree);
+public:
+    //!
+    //!работа с деревом
+    //!
+    void work(BSTTree::Tree &tree);
+    //!
+    //!вывод меню
+    //!
     void print_menu();
-    void choose_show_order(BSTTree::Tree& tree);
+    //!
+    //!выбора варианта обхода узлов для вывода
+    //!
+    void choose_show_order(BSTTree::Tree &tree);
+    //!
+    //!подтверждение выхода из программы
+    //!
     int approve_choice();
+    //!
+    //!обработка пользовательского ввода (строка)
+    //!
     std::string user_input();
-    bool check_file_exist(std::string& path);
-    void work_with_file(BSTTree::Tree& tree, int working_mode, bool need_path);
-};
-}   //  namespace BSTTree
+    //!
+    //!обработка пользовательского ввода (число)
+    //!
+    int input_digit();
+    //!
+    //!проверка на существование файла
+    //!
+    bool check_file_exist(std::string &path);
+    //!
+    //!создание и считывание из файла (need_path -- для тестов)
+    //!
+    void work_with_file(BSTTree::Tree &tree, int working_mode, bool need_path);
 
-#endif  //  INCLUDE_TUI_H_
+};
+}   // namespace BSTTree
+
+#endif // INCLUDE_TUI_H_

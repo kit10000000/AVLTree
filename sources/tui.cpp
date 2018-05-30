@@ -1,13 +1,12 @@
 //
 //  tui.cpp
-//  BSTree
+//  AVLTree
 //
-//  Created by E. Chernikova on 20.03.2018.
+//  Created by E. Chernikova on 27.03.2018.
 //  Copyright © 2018 E. Chernikova. All rights reserved.
 //
-
-#include "../include/tui.h"
-#include "../include/tree.h"
+#include "tui.h"
+#include "tree.h"
 
 
 void  BSTTree::TUI::print_menu() {
@@ -21,81 +20,96 @@ void  BSTTree::TUI::print_menu() {
     std::cout << "7. Проверить наличие узла" << std::endl;
     std::cout << "8. Завершить работу программы" << std::endl;
 }
-
-bool BSTTree::TUI::check_file_exist(std::string &path) {
-    std::ifstream f(path.c_str());
+bool BSTTree::TUI::check_file_exist(std::string &path){
+    std::ifstream f(path);
     return f.good();
+};
+
+std::string BSTTree::TUI::user_input(){
+        std::string in;
+        while (!(std::cin >> in)) {
+            std::cout << "Неправильный ввод";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        return in;
 }
 
-std::string BSTTree::TUI::user_input() {
-    std::string input = "";
-    std::cin.ignore();
-    std::getline(std::cin, input);
-    return input;
-}
-
-void BSTTree::TUI::work_with_file(BSTTree::Tree &tree, int working_mode, bool need_path) {
-    std::string path = "1.txt";
-    if (need_path)
+void BSTTree::TUI::work_with_file(BSTTree::Tree &tree , int working_mode, bool need_path){
+    std::string path = "";
+    if (need_path){
+        std::cout << "Введите путь к файлу" << std::endl;
         std::string path = user_input();
+    } else{
+        path= "1.txt";
+    }
     bool check = check_file_exist(path);
     std::string str;
-    if (working_mode == 1) {
-        if (check && need_path) {
+    if (working_mode == 1){
+        if(check){
             std::cout << "Файл уже существует, перезаписать? (Да|Нет):" << std::endl;
-            std::cin>> str;
-            while (str != "Нет" && str != "Да") {
-                std::cout << "Введите \"Да\" или \"Нет\"" << std::endl;
-                std::cin>> str;
+            str = "";
+            while(str != "Нет" && str != "Да"){
+                str = user_input();
             }
-            if (str == "Нет") {;}
-            if (str == "Да") {
+            if (str == "Да"){
                 std::ofstream f;
                 f.open(path, std::ios::trunc);
                 f << tree;
-//                tree.save_tree(f);
                 f.close();
                 std::cout << "Файл был перезаписан" << std::endl;
             }
         } else {
             std::ofstream f;
             f.open(path);
-//            tree.save_tree(f);
             f << tree;
             f.close();
             std::cout << "Дерево было успешно сохранено" << std::endl;
         }
     }
-    if (working_mode == 2) {
-        if (check) {
+    if (working_mode == 2){
+        if(check){
+            tree.delete_tree();
             std::string line;
             std::ifstream f;
             f.open(path, std::ios::out);
-            if (f.is_open()) {
-                while ( getline(f, line) ) {
+            if (f.is_open())
+            {
+                while ( getline (f,line) )
+                {
                     std::istringstream iss(line);
                     int node;
-                    while (iss >> node) {
+                    while(iss>>node){
                         tree.insert(node);
                     }
                 }
                 f.close();
                 std::cout << "Дерево было успешно загружено" << std::endl;
             }
-
+            
         } else {
             std::cerr << "Файла с заданным путем не существует" << std::endl;
         }
     }
 }
+int BSTTree::TUI::input_digit() {
 
+    int in;
+    while (!(std::cin >> in))
+    {
+        std::cout << "Неправильный ввод. Введите цифру."<< std::endl;
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+    return in;
+}
 void BSTTree::TUI::work(BSTTree::Tree &tree) {
     print_menu();
     int  c = -1;
     int value = 0;
     while (c!= 0) {
         std::cout << "Выберите одну из операций:" << std::endl;
-        std::cin>> c;
+        c = input_digit();
         switch (c) {
         case 1:
             std::cout << "1. Вывести дерево на экран" << std::endl;
@@ -108,9 +122,9 @@ void BSTTree::TUI::work(BSTTree::Tree &tree) {
         case 3:
             std::cout << "3. Добавить узел в дерево" << std::endl;
             std::cout << "Введите ключ" << std::endl;
-            if (std::cin >> value) {
-                tree.insert(value);
-            } else {
+            if(std::cin>> value){
+                  tree.insert(value);
+            } else{
                 std::cout << "Неверный ввод" << std::endl;
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -119,7 +133,7 @@ void BSTTree::TUI::work(BSTTree::Tree &tree) {
         case 4:
             std::cout << "4. Удалить узел из дерева" << std::endl;
             std::cout << "Введите ключ " << std::endl;
-            if (std::cin >> value) {
+                if(std::cin>> value){
                 tree.delete_node(value);
             } else {
                 std::cout << "Неверный ввод" << std::endl;
@@ -129,18 +143,22 @@ void BSTTree::TUI::work(BSTTree::Tree &tree) {
             break;
         case 5:
             std::cout << "5. Сохранить дерево в файл" << std::endl;
-            std::cout << "Введите путь к файлу" << std::endl;
-            work_with_file(tree, 1, true);
+            work_with_file(tree,1, true);
             break;
         case 6:
             std::cout << "6. Загрузить дерево из файла" << std::endl;
-            std::cout << "Введите путь к файлу" << std::endl;
-            work_with_file(tree, 2, true);
+                if(!tree.is_empty()){
+                    std::cout << "Дерево непустое. Перезаписать?";
+                    if( user_input() == "Нет" ) {
+                        break;
+                    }
+                }
+                work_with_file(tree, 2,true);
             break;
         case 7:
             std::cout << "7. Проверить наличие узла" << std::endl;
             std::cout << "Введите ключ для поиска" << std::endl;
-            if (std::cin>> value) {
+            if(std::cin>> value){
                 tree.check_existing(value);
             } else {
                 std::cout << "Неверный ввод" << std::endl;
@@ -157,41 +175,44 @@ void BSTTree::TUI::work(BSTTree::Tree &tree) {
         }
     }
 }
-void BSTTree::TUI::choose_show_order(BSTTree::Tree &tree) {
+void BSTTree::TUI::choose_show_order(BSTTree::Tree &tree){
     int c  = -1;
-    std::cout << "Выберите вариант обхода:" << std::endl;
-    std::cout << "1. Прямой обход" << std::endl;
-    std::cout << "2. Поперечный обход" << std::endl;
-    std::cout << "3. Обратный обход " << std::endl;
-    std::cin>> c;
-    switch (c) {
-    case 1:
-        tree.show_nodes(BSTTree::traversal_order:: pre_order);
-        break;
-    case 2:
-        tree.show_nodes(BSTTree::traversal_order:: in_order);
-        break;
-    case 3:
-        tree.show_nodes(BSTTree::traversal_order:: post_order);
-        break;
-    default:
-        std::cerr << "Не является пунктом меню" << std::endl;
+    while (c!= 0) {
+        std::cout << "Выберите вариант обхода:" << std::endl;
+        std::cout << "1. Прямой обход" << std::endl;
+        std::cout << "2. Поперечный обход" << std::endl;
+        std::cout << "3. Обратный обход " << std::endl;
+        std::cout << "4. Выход в главное меню " << std::endl;
+        c = input_digit();
+        switch (c) {
+                case 1:
+                    tree.show_nodes(BSTTree::traversal_order:: pre_order);
+                    break;
+                case 2:
+                    tree.show_nodes(BSTTree::traversal_order:: in_order);
+                    break;
+                case 3:
+                    tree.show_nodes(BSTTree::traversal_order:: post_order);
+                    break;
+                case 4:
+                    return;
+                default:
+                    std::cerr << "Не является пунктом меню" << std::endl;
+        }
     }
 }
 
-int BSTTree::TUI::approve_choice() {
+int BSTTree::TUI::approve_choice(){
     int choice = 0;
-    std::string str;
+    std::string str = "";
     std::cout << "Вы уверены, что хотите выйти из программы ?" << std::endl;
-    std::cin>> str;
-    while (str != "Нет" && str != "Да") {
-        std::cout << "Введите \"Да\" или \"Нет\"" << std::endl;
-        std::cin>> str;
+    while(str != "Нет" && str != "Да"){
+        str = user_input();
     }
-    if (str == "Нет") {
+    if (str == "Нет"){
         choice =  8;
     }
-    if (str == "Да") {
+    if (str == "Да"){
         choice = 0;
     }
     return choice;
