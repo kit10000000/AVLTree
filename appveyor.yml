@@ -9,7 +9,7 @@ before_build:
 build_script:
   - cmake --build _build
   - cmake --build _build --target install
-  - cmake --build _build --target test
+
   
 after_build:
   - cd _build 
