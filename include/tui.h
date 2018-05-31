@@ -8,7 +8,7 @@
 
 #include <string>
 #include <sstream>
-#include <limits.h>
+#include <limits>
 #include "tree.h"
 
 
