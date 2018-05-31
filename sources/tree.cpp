@@ -13,6 +13,7 @@ BSTTree::Tree::Tree() {
 }
 
 BSTTree::Tree::Tree(std::initializer_list<int> list) {
+    this -> root = nullptr;
     for(auto n: list){
         this->insert(n);
     }
