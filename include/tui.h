@@ -5,12 +5,12 @@
 //  Created by E. Chernikova on 27.03.2018.
 //  Copyright © 2018 E. Chernikova. All rights reserved.
 //
-#include <iostream>
+
 #include <string>
-#include <fstream>
-#include <stdio.h>
 #include <sstream>
+#include <limits.h>
 #include "tree.h"
+
 
 
 #ifndef INCLUDE_TUI_H_
