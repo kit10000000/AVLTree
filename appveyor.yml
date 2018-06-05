@@ -22,4 +22,5 @@ after_build:
 
 
 test_script:
+  - cd _build 
   - make unit_tests_coverage
