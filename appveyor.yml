@@ -11,10 +11,7 @@ before_build:
   
 build_script:
   - cmake --build _build
-<<<<<<< HEAD
-=======
   - cmake --build _build --target install
->>>>>>> 49c1b083ec628dab4b8bf6be4c7dc4adb0637bf2
 
   
 after_build:
