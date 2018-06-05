@@ -21,6 +21,4 @@ after_build:
   - cmake --build _build --target package 
 
 test_script:
-  - cd _build
-  - ./check -s -r compact
-  - ./unit_tests 
+  - make unit_tests_coverage
