@@ -12,13 +12,14 @@ before_build:
 build_script:
   - cmake --build _build
   - cmake --build _build --target install
-
+  - cmake --build _build --target unit_tests_coverage 
+  - cmake --build _build --target package 
   
 after_build:
   - cd _build 
   - cpack -G "TGZ" 
   - cd ..
-  - cmake --build _build --target package 
+
 
 test_script:
   - make unit_tests_coverage
