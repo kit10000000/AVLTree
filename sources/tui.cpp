@@ -50,7 +50,11 @@ void BSTTree::TUI::work_with_file(BSTTree::Tree &tree , int working_mode, bool n
             std::cout << "Файл уже существует, перезаписать? (Да|Нет):" << std::endl;
             str = "";
             while(str != "Нет" && str != "Да"){
-                str = user_input();
+                if (!need_path){
+                    str = "Да";
+                } else{
+                    str = user_input();
+                }
             }
             if (str == "Да"){
                 std::ofstream f;

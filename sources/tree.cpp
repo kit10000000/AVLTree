@@ -101,10 +101,10 @@ bool BSTTree::Tree::check_existing(int key){
         return false;
     } else{
         if(check_existing(key, this->root)){
-            std::cout <<"Узел найден" << std::endl;
+            std::cout <<"Узел с ключом "<< key <<" найден" << std::endl;
             return true;
         } else{
-            std::cout <<"Узел не был найден в дереве" << std::endl;
+            std::cout <<"Узел с ключом "<< key <<" не найден в дереве" << std::endl;
             return false;
         }
     }
@@ -129,8 +129,6 @@ bool BSTTree::Tree::check_existing(int key, BSTTree::Node *node){
 int BSTTree::Tree:: find_min(BSTTree::Node* node)
 {
     int tmp_data = -1;
-    if(node == nullptr)
-        tmp_data = node->data;
     if(node->left == nullptr){ //  если нет левого листа, то это наименьший, тк правый больше
         tmp_data = node -> data;
     } else {
@@ -140,9 +138,6 @@ int BSTTree::Tree:: find_min(BSTTree::Node* node)
 }
 
 BSTTree::Node*  BSTTree::Tree::delete_node(int key, BSTTree::Node* node) {
-    if (node == nullptr) {
-        return node;
-    }
     if(key > node->data){
         node->right = delete_node(key, node->right);
     } else if (key < node->data){
@@ -169,10 +164,10 @@ void  BSTTree::Tree::delete_node(int key) {
     } else{
         if(check_existing(key, this->root)){
             this->root = delete_node(key, this->root);
-            std::cout <<"Узел был успешно удален из дерева" << std::endl;
+            std::cout <<"Узел с ключом "<< key <<" успешно удален из дерева" << std::endl;
         }
         else{
-            std::cout <<"Узел не был найден в дереве" << std::endl;
+            std::cout <<"Узел с ключом "<< key <<" не найден в дереве" << std::endl;
         }
     }
 }
