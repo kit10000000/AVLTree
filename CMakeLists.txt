@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 3.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(BUILD_EXAMPLES "Build examples" ON)
-option(BUILD_TESTS "Build tests" ON)
+option(BUILD_EXAMPLES "Build examples" OFF)
+option(BUILD_TESTS "Build tests" OFF)
 
 project(BSTTree)
 include_directories("${CMAKE_SOURCE_DIR}/include")
@@ -36,10 +36,9 @@ if(BUILD_EXAMPLES)
   foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
     add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-    target_link_libraries(${EXAMPLE_NAME} tree tui)
+    target_link_libraries(tree tui ${EXAMPLE_NAME})
     install(TARGETS ${EXAMPLE_NAME}
-      RUNTIME DESTINATION bin
-    )
+      RUNTIME DESTINATION bin)
   endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
 endif()
 
