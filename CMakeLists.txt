@@ -36,7 +36,7 @@ if(BUILD_EXAMPLES)
   foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
     add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-    target_link_libraries(tree tui ${EXAMPLE_NAME})
+    target_link_libraries(${EXAMPLE_NAME} tree tui)
     install(TARGETS ${EXAMPLE_NAME}
       RUNTIME DESTINATION bin)
   endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
