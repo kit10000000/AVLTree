@@ -2,6 +2,9 @@ version: 1.0.{build}
 
 image: 
   - Ubuntu
+ 
+install:
+  - sudo apt -y install lcov
   
 before_build:
   - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON -DCPACK_GENERATOR="TGZ" -DCMAKE_BUILD_TYPE=Coverage
